@@ -8,6 +8,8 @@
 
 Besides a work in progress, vaporware and a pie in the sky idea, `po` is a way for your side scripts to send in and aggregate a wide variety of metrics. Text, words, numbers, dates, time intervals and heartbeats to name a few. Data can be validated, based on it's type. Once the data is collected, create dashboards based off of yaml configuration files to display metrics that you care about. 
 
+An [Oogway companian app](https://github.com/kcmerrill/oogway)
+
 ## Collect Data
 
 As a package, you can configure PO to create entity objects to track. As a standalone app, you can use http web requests. A few examples:
