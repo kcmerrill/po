@@ -29,8 +29,8 @@ $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/status/string/ok
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/response.code/number/200
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/total.checks/number/0
-$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/total.404/number/0
-$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/total.200/number/0
+$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/status.404/number/0
+$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/status.200/number/0
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/elapsed.time.in.ms/list/1
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/last.checked/date/now
 $ curl -v http://kcmerrill.com | curl -d @- -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/page.contents/text
@@ -54,8 +54,11 @@ http.check.kcmerrill:
     width: 20%
     innerHTML: status
     bg-color: {{ if status == "ok" }} green {{ else }} red {{ end }}
+  pie-chart:
+    width: 20%
+    data: status.404 status.200 status.500
   bar-chart:
-    width: 40%
+    width: 20%
     x-axis: Date
     y-axis: Time in Milliseconds
     data: elapsed.time.in.ms
