@@ -25,6 +25,7 @@ po.E("kcmerrill", user).A("email").Set("kcmerrill@gmail.com")
 ```sh
 # create an entity object
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com
+
 # add new attributes
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/status/string/ok
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/response.code/number/200
