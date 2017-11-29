@@ -37,7 +37,7 @@ $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/last.checked/dat
 $ curl -v http://kcmerrill.com | curl -d @- -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/page.contents/text
 
 # update attributes
-$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/load.time/list/1s
+$ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/load.time/1s
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/response.code/302
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/total.checks/increment
 $ curl -X POST http://po.kcmerrill.com/http.check.kcmerrill.com/elapsed.time.in.ms/3
